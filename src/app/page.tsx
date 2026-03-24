@@ -4,6 +4,7 @@ import Faq from "@/components/Faq";
 import FeaturedEvents from "@/components/FeaturedEvents";
 import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
+import Newsletter from "@/components/Newsletter";
 import StatsSection from "@/components/StatsSection";
 import Testimonials from "@/components/Testimonials";
 
@@ -17,6 +18,7 @@ export default function Home() {
      <StatsSection></StatsSection>
      <Testimonials></Testimonials>
      <Faq></Faq>
+     <Newsletter></Newsletter>
 
     </main>
   );
