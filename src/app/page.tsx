@@ -1,5 +1,6 @@
 
 import Categories from "@/components/Categories";
+import Faq from "@/components/Faq";
 import FeaturedEvents from "@/components/FeaturedEvents";
 import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
@@ -15,6 +16,7 @@ export default function Home() {
      <HowItWorks></HowItWorks>
      <StatsSection></StatsSection>
      <Testimonials></Testimonials>
+     <Faq></Faq>
 
     </main>
   );
