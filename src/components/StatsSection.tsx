@@ -76,7 +76,7 @@ export default function StatsSection() {
   return (
     <section className="bg-[#0d0d12] py-20 px-6 sm:px-12">
       <div className="max-w-[1290px] mx-auto">
-        {/* Header */}
+        
         <div className="text-center mb-16">
           <p className="text-[#605DFF] font-semibold text-sm tracking-widest uppercase mb-2">
             Our Impact
@@ -89,7 +89,7 @@ export default function StatsSection() {
           </p>
         </div>
 
-        {/* Stats Grid */}
+        {/* Stats*/}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, i) => (
             <div
