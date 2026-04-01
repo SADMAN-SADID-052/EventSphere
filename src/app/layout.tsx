@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "EventSphere",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className="bg-[#0b0b0f] text-white">
         <Navbar />
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
