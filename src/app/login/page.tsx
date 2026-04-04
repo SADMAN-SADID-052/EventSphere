@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -29,12 +30,14 @@ export default function LoginPage() {
 
       if (!data.success) {
         setError(data.message);
+        toast.error(data.message);
         setLoading(false);
         return;
       }
 
       localStorage.setItem("token", data.data.token);
       localStorage.setItem("user", JSON.stringify(data.data));
+      toast.success("Welcome back! Login successful 🎉");
       router.push("/");
     } catch (err) {
       setError("Something went wrong. Please try again.");

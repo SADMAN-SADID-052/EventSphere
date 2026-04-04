@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="bg-[#0b0b0f] text-white">
         <Navbar />
         <Toaster
-          position="top-right"
+          position="top-center"
           toastOptions={{
             style: {
               background: "#13131a",
