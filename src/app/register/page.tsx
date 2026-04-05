@@ -57,6 +57,7 @@ export default function RegisterPage() {
 
       localStorage.setItem("token", data.data.token);
       localStorage.setItem("user", JSON.stringify(data.data));
+      window.dispatchEvent(new Event("storage"));
       toast.success("Account created successfully! Welcome 🎉");
       router.push("/");
     } catch (err) {

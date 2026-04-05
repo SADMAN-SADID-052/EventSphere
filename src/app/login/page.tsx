@@ -37,6 +37,7 @@ export default function LoginPage() {
 
       localStorage.setItem("token", data.data.token);
       localStorage.setItem("user", JSON.stringify(data.data));
+      window.dispatchEvent(new Event("storage"));
       toast.success("Welcome back! Login successful 🎉");
       router.push("/");
     } catch (err) {
