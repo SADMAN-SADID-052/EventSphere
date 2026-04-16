@@ -101,6 +101,7 @@ function AdminOverview() {
 }
 
 function UserOverview() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [bookings, setBookings] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -221,6 +222,7 @@ function UserOverview() {
 }
 
 export default function DashboardPage() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
@@ -238,7 +240,7 @@ export default function DashboardPage() {
             Welcome back, {user?.name?.split(" ")[0]}! 👋
           </h2>
           <p className="text-gray-400 text-sm mt-1">
-            Here's what's happening with your account today.
+            Here's what is happening with your account today.
           </p>
         </div>
 
