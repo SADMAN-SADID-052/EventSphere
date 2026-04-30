@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import Ai_bot from "@/components/Ai_bot";
 
 export const metadata: Metadata = {
   title: "EventSphere",
@@ -42,7 +43,7 @@ export default function RootLayout({
             },
           }}
         />
-
+          <Ai_bot></Ai_bot>
         {children}
         <Footer></Footer>
       </body>

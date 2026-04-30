@@ -6,7 +6,7 @@ interface Message {
   content: string;
 }
 
-export default function AIChatbot() {
+export default function Ai_bot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -49,7 +49,7 @@ export default function AIChatbot() {
       } else {
         setMessages((prev) => [
           ...prev,
-          { role: "ai", content: "Sorry, I couldn't process that. Please try again!" },
+          { role: "ai", content: "Please login first to use the AI chatbot! 🔐" },
         ]);
       }
     } catch (error) {
