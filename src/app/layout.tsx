@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 import Ai_bot from "@/components/Ai_bot";
+import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "EventSphere",
@@ -18,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#0b0b0f] text-white">
-        <Navbar />
+        <ThemeProvider>
+          <Navbar />
         <Toaster
           position="top-center"
           toastOptions={{
@@ -46,6 +48,8 @@ export default function RootLayout({
           <Ai_bot></Ai_bot>
         {children}
         <Footer></Footer>
+        </ThemeProvider>
+        
       </body>
     </html>
   );
