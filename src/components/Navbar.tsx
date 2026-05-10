@@ -10,23 +10,24 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [user, setUser] = useState<any>(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-useEffect(() => {
-  const storedUser = localStorage.getItem("user");
-  if (storedUser) setUser(JSON.parse(storedUser));
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) setUser(JSON.parse(storedUser));
 
-  const handleStorageChange = () => {
-    const updatedUser = localStorage.getItem("user");
-    if (updatedUser) {
-      setUser(JSON.parse(updatedUser));
-    } else {
-      setUser(null);
-    }
-  };
+    const handleStorageChange = () => {
+      const updatedUser = localStorage.getItem("user");
+      if (updatedUser) {
+        setUser(JSON.parse(updatedUser));
+      } else {
+        setUser(null);
+      }
+    };
 
-  window.addEventListener("storage", handleStorageChange);
-  return () => window.removeEventListener("storage", handleStorageChange);
-}, []);
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
@@ -87,6 +88,14 @@ useEffect(() => {
             </>
           )}
         </div>
+
+        {/* Theme Toggle */}
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="w-9 h-9 rounded-xl border border-white/10 hover:border-[#605DFF] text-gray-400 hover:text-[#605DFF] flex items-center justify-center transition-all"
+        >
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center gap-3">
