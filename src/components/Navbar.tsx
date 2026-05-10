@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const router = useRouter();
