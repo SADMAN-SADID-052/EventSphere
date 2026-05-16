@@ -89,14 +89,6 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Theme Toggle */}
-        <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="w-9 h-9 rounded-xl border border-white/10 hover:border-[#605DFF] text-gray-400 hover:text-[#605DFF] flex items-center justify-center transition-all"
-        >
-          {theme === "dark" ? "☀️" : "🌙"}
-        </button>
-
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center gap-3">
           {user ? (
@@ -184,6 +176,13 @@ export default function Navbar() {
               >
                 Sign Up
               </Link>
+              {/* Theme Toggle */}
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="w-9 h-9 rounded-xl border border-white/10 hover:border-[#605DFF] text-gray-400 hover:text-[#605DFF] flex items-center justify-center transition-all"
+              >
+                {theme === "dark" ? "☀️" : "🌙"}
+              </button>
             </>
           )}
         </div>

@@ -65,7 +65,7 @@ export default function Ai_bot() {
     <>
       {/* Chat Window */}
       {open && (
-        <div className="fixed bottom-24 right-6 w-80 sm:w-96 z-50 rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+        <div className="fixed bottom-10 right-7 w-80 sm:w-96 z-50 rounded-2xl overflow-hidden shadow-2xl border border-white/10"
           style={{ background: "#13131a" }}
         >
           {/* Header */}
@@ -181,7 +181,7 @@ export default function Ai_bot() {
         className="fixed bottom-6 right-6 w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg transition-all hover:scale-110 z-50"
         style={{ background: open ? "#E85D24" : "#605DFF" }}
       >
-        <span className="text-2xl">{open ? "✕" : "🤖"}</span>
+        <span className="text-2xl">{open ? "X" : "🤖"}</span>
       </button>
     </>
   );
