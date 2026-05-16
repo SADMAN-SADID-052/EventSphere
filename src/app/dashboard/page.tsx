@@ -1,7 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
+// import DashboardLayout from "@/components/DashboardLayout";
+// import Link from "next/link";
 import DashboardLayout from "@/components/DashboardLayout";
 import Link from "next/link";
+import DashboardCharts from "@/components/DashboardCharts";
 
 interface Stats {
   totalUsers: number;
@@ -73,6 +76,8 @@ function AdminOverview() {
           </Link>
         ))}
       </div>
+
+      <DashboardCharts />
 
       {/* Quick Links */}
       <div className="bg-[#13131a] rounded-2xl border border-white/5 p-6">
